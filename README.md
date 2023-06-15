@@ -22,6 +22,13 @@
 
     By default, the program solves the 4-Queens problem. You can modify the `n` parameter in the `main.py` file to solve for a different value of `n`.
 
+
+## Algorithm
+
+The N-Queens Solver uses a recursive backtracking algorithm to find a valid solution. It starts by placing a queen in the first row and iterates through all possible positions in the second row. If a position is found where the queen is not threatened by any other queens, it continues to the next row. If no such position is found, it backtracks to the previous row and explores other positions.
+
+The algorithm repeats this process until all `n` queens are placed on the chessboard or all possibilities are exhausted. It returns the first valid solution it finds or `None` if no solution exists.
+
 ## Example Output :
 - If You Set The Argument `verbose=True` The Program Will Print Every Queen Placement 
 ```
