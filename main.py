@@ -1,3 +1,4 @@
 from nqueenssolver import NQueensSolver
 
-solve = NQueensSolver(8, verbose=True)
+n = 4
+solve = NQueensSolver(n, verbose=True)
