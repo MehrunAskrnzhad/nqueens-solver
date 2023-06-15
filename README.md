@@ -3,6 +3,10 @@
 
 ## Usage 
 
+### Prerequisites
+
+- Python 3.x
+
 ### Running the Program
 
 1. Clone the repository:
