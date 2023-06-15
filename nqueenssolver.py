@@ -12,7 +12,7 @@ class NQueensSolver:
         self.n = n
         self.solution = []
 
-        def placeQueen(row: int, queens: List[int]) -> List[int]:
+        def place_queen(row: int, queens: List[int]) -> List[int]:
             """
             Recursive function to place the queens on the chessboard and find a valid solution.
 
@@ -34,14 +34,14 @@ class NQueensSolver:
                     queens[row] = col
                     if verbose:
                         print(f"Placing Queen at Row {row} and Column {col}.")
-                    if (result := placeQueen(row + 1, queens)):
+                    if (result := place_queen(row + 1, queens)):
                         return result
 
             return None
 
-        self.solution = placeQueen(0, [None] * self.n)
+        self.solution = place_queen(0, [None] * self.n)
 
-    def getChessboard(self) -> str:
+    def get_chessboard(self) -> str:
         """
         Generate a string representation of the chessboard with queens placed.
 
@@ -60,13 +60,13 @@ class NQueensSolver:
         chessboard += "+---" * self.n + "+\n"
         return chessboard
 
-    def displayChessboard(self) -> None:
+    def display_chessboard(self) -> None:
         """
         Print the string representation of the chessboard with queens placed.
         """
-        print(self.getChessboard())
+        print(self.get_chessboard())
 
-    def getSolutionMatrix(self) -> List[List[int]]:
+    def get_solution_matrix(self) -> List[List[int]]:
         """
         Generate a matrix representation of the chessboard with queens placed.
 
@@ -78,9 +78,9 @@ class NQueensSolver:
             matrix[row][col] = 1
         return matrix
 
-    def displaySolutionMatrix(self) -> None:
+    def display_solution_matrix(self) -> None:
         """
         Print the matrix representation of the chessboard with queens placed.
         """
-        for row in self.getSolutionMatrix():
+        for row in self.get_solution_matrix():
             print(' '.join(map(str, row)))
