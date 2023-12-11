@@ -1,5 +1,6 @@
 class NQueensSolver:
     def __init__(self,n):
+        if n<=3: exit("n Must be greater od equal to 4.") 
         self.n,self.solution=n,[]
         def p(r, q):
             if r==self.n:return q
